@@ -1,0 +1,12 @@
+import express from "express";
+import  * as pacController from '../controllers/pacController';
+const pacRouter = express.Router();
+pacRouter.route("/addnew").post(pacController.addnew  );
+pacRouter.route("/findcode").get(pacController.findCode  );
+pacRouter.route("/findname").get(pacController.findName  );
+pacRouter.route("/findall").get(pacController.findAll  );
+pacRouter.route("/update").put(pacController.update  );
+pacRouter.route("/remove").delete(pacController.remove  );
+pacRouter.route("/next").get(pacController.next  );
+pacRouter.route("/previous").get(pacController.previous  );
+export default pacRouter;
