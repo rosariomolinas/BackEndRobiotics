@@ -7,7 +7,8 @@ const orgSchema = new mongoose.Schema( {
     msangre : Boolean,
     tomo3d : Boolean,
     medica : Boolean,
-    orden : Number
+    orden : Number,
+    activo : Boolean
 })
 
 const orgs = mongoose.model ('organos', orgSchema)

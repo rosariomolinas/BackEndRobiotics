@@ -1,10 +1,11 @@
 import express from "express";
 import * as orgController from '../controllers/orgController';
 const orgRouter = express.Router();
-orgRouter.route("/addnew").post(orgController.addnew  );
-orgRouter.route("/findCode").post(orgController.findCode  );
-orgRouter.route("/update").post(orgController.update);
-orgRouter.route("/traertodos").post(orgController.traertodos);
+orgRouter.route("/addnew").post(orgController.addnew);
+orgRouter.route("/findCode").get(orgController.findCode);
+orgRouter.route("/update").put(orgController.update);
+orgRouter.route("/traertodos").get(orgController.traertodos);
+orgRouter.route("/remove").delete(orgController.remove);
 // orgRouter.route("/update2").post(orgController.update2 );
 // orgRouter.route("/update").post(orgController.update);
 export default orgRouter;

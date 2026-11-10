@@ -1,4 +1,4 @@
-const medicacion = require("../db/medicacion.ts")
+import medica from "../db/medicacion";
 
     
 
@@ -7,8 +7,9 @@ const traertodos =  (req, res) =>
 {
 
     console.log("todos los medicamentos..." );
-    medicacion.find({}).then((resultado) => 
+    medica.find({}).then((resultado) => 
             {  
+                console.log(resultado)
                 res.status(200).json(resultado)
 
             });

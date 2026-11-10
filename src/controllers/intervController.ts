@@ -25,7 +25,7 @@ const traeralgunos =  (req, res) =>
     {
         
         console.log("todos algunos órganos (filtros)..." );
-        let  record = { ...req.body };
+        let  record = { ...req.query };
         const jquery: Record<string, any> = {};
         console.log('req.body', record);
         if (!(record.doctor == null ))
@@ -88,7 +88,7 @@ const findCode =  (req, res) =>
         {
             console.log("Buscar organo...");
                         
-            let  record = { ...req.body };
+            let  record = { ...req.query };
             const resultado: Record<string, any> = {};
             console.log('req.body', record)
 

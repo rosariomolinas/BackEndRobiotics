@@ -75,7 +75,7 @@ const validar =  (req, res) =>
             console.log("Validar usuario...");
             console.log("usuario sesión antes:",  req.session.sessuser );
             
-            let  record = { ...req.body }
+            let  record = { ...req.query }
             //console.log('req.body', record)
             var id = crypto.randomBytes(20).toString('hex');
             const updatev = { "token" : id } ;
